@@ -1,4 +1,4 @@
-# ForceTouch (Coming Soon!)
+# ForceTouch
 <h1 align="center"><img src="https://s13.postimg.org/rodwtssrr/background.png"/></h1>
 <h2 align="center">Simple implementation of ForceTouch on Android</h1>
 
@@ -18,6 +18,23 @@
 ![alt tag](https://s14.postimg.org/5973qqtcx/screen.png)
 
 ##USAGE
+
+Add this to `build.gradle`
+
+```groovy
+allprojects {
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
+```
+
+Than add this dependencies
+
+```groovy
+compile 'com.github.michelelacorte:ForceTouch:1.0.0'
+```
 
 ```groovy
 final ForceTouchListener forceTouchListener = new ForceTouchListener(getApplicationContext(), 70, 0.27f, new ForceTouchExecution() {
@@ -44,10 +61,11 @@ Android API 14+
 
 ##CHANGELOG
 
-**v1.0.0 (Coming Soon)**
+**v1.0.0**
 - Support API 14+ (API 25 Compatible)
 - Added class `ForceTouchListener` with constructor to create Force Touch witch custom param
 - Added interface `ForceTouchExecution` with method `onForceTouch` for define custom action onForceTouch detected.
+- Added example App
 
 ##CREDITS
 
