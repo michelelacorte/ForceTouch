@@ -1,14 +1,12 @@
 package it.michelelacorte.forcetouch;
 
 import android.content.Context;
-import android.media.AudioAttributes;
-import android.media.browse.MediaBrowser;
+import android.os.Handler;
 import android.os.Vibrator;
+import android.support.v4.util.ArrayMap;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-
-import java.util.concurrent.Callable;
 
 /**
  * Created by Michele on 21/10/2016.
@@ -29,61 +27,144 @@ public class ForceTouchListener implements View.OnTouchListener {
     private long millisToVibrate;
     private float pressureLimit;
     private float pressure;
-    private ForceTouchExecution forceTouchExecution;
+    //Callback method
+    private Callback forceTouchExecution;
+    //Default isProgressive false
+    private boolean isProgressive = false;
+    private boolean isVibrate = true;
+
+    private TaskScheduler timer = new TaskScheduler();
+    private Runnable runnable;
+    private boolean alreadyExecuted = false;
 
     /**
      * Public constructor with Context, millisToVibrate and pressureLimit
      * @param context Context
      * @param millisToVibrate long
      * @param pressureLimit float
-     * @param forceTouchExecution ForceTouchExecution
+     * @param forceTouchExecution Callback
      */
-    public ForceTouchListener(Context context, long millisToVibrate, float pressureLimit, ForceTouchExecution forceTouchExecution)
+    public ForceTouchListener(Context context, long millisToVibrate, float pressureLimit, boolean isVibrate, Callback forceTouchExecution)
     {
         this.context = context;
         this.millisToVibrate = millisToVibrate;
         this.pressureLimit = pressureLimit;
         this.forceTouchExecution = forceTouchExecution;
+        this.isProgressive = false;
+        this.isVibrate = isVibrate;
     }
 
     /**
      * Public constructor with Context and pressureLimit, millisToVibrate is setted to 70ms
      * @param context Context
      * @param pressureLimit float
-     * @param forceTouchExecution ForceTouchExecution
+     * @param forceTouchExecution Callback
      */
-    public ForceTouchListener(Context context, float pressureLimit, ForceTouchExecution forceTouchExecution)
+    public ForceTouchListener(Context context, float pressureLimit, boolean isVibrate, Callback forceTouchExecution)
     {
         this.context = context;
         this.millisToVibrate = DEFAULT_MILLIS_TO_VIBRATE;
         this.pressureLimit = pressureLimit;
         this.forceTouchExecution = forceTouchExecution;
+        this.isProgressive = false;
+        this.isVibrate = isVibrate;
     }
 
     /**
      * Public constructor with Context and millisToVibrate, pressureLimit is setted to 0.27
      * @param context Context
      * @param millisToVibrate long
-     * @param forceTouchExecution ForceTouchExecution
+     * @param forceTouchExecution Callback
      */
-    public ForceTouchListener(Context context, long millisToVibrate, ForceTouchExecution forceTouchExecution)
+    public ForceTouchListener(Context context, long millisToVibrate, boolean isVibrate, Callback forceTouchExecution)
     {
         this.context = context;
         this.millisToVibrate = millisToVibrate;
         this.pressureLimit = DEFAULT_PRESSURE_LIMIT;
         this.forceTouchExecution = forceTouchExecution;
+        this.isProgressive = false;
+        this.isVibrate = isVibrate;
     }
 
     /**
      * Public constructor with only Context, millisToVibrate and pressureLimit is setted by default
      * @param context Context
-     * @param forceTouchExecution ForceTouchExecution
+     * @param forceTouchExecution Callback
      */
-    public ForceTouchListener(Context context, ForceTouchExecution forceTouchExecution){
+    public ForceTouchListener(Context context, boolean isVibrate, Callback forceTouchExecution){
         this.context = context;
         this.millisToVibrate = DEFAULT_MILLIS_TO_VIBRATE;
         this.pressureLimit = DEFAULT_PRESSURE_LIMIT;
         this.forceTouchExecution = forceTouchExecution;
+        this.isProgressive = false;
+        this.isVibrate = isVibrate;
+    }
+
+    /**
+     * Public constructor with Context, millisToVibrate and pressureLimit
+     * @param context Context
+     * @param millisToVibrate long
+     * @param pressureLimit float
+     * @param forceTouchExecution Callback
+     * @param isProgressive boolean
+     */
+    public ForceTouchListener(Context context, long millisToVibrate, float pressureLimit, boolean isProgressive, boolean isVibrate, Callback forceTouchExecution)
+    {
+        this.context = context;
+        this.millisToVibrate = millisToVibrate;
+        this.pressureLimit = pressureLimit;
+        this.forceTouchExecution = forceTouchExecution;
+        this.isProgressive = isProgressive;
+        this.isVibrate = isVibrate;
+    }
+
+    /**
+     * Public constructor with Context and pressureLimit, millisToVibrate is setted to 70ms
+     * @param context Context
+     * @param pressureLimit float
+     * @param forceTouchExecution Callback
+     * @param isProgressive boolean
+     */
+    public ForceTouchListener(Context context, float pressureLimit, boolean isProgressive, boolean isVibrate, Callback forceTouchExecution)
+    {
+        this.context = context;
+        this.millisToVibrate = DEFAULT_MILLIS_TO_VIBRATE;
+        this.pressureLimit = pressureLimit;
+        this.forceTouchExecution = forceTouchExecution;
+        this.isProgressive = isProgressive;
+        this.isVibrate = isVibrate;
+    }
+
+    /**
+     * Public constructor with Context and millisToVibrate, pressureLimit is setted to 0.27
+     * @param context Context
+     * @param millisToVibrate long
+     * @param forceTouchExecution Callback
+     * @param isProgressive boolean
+     */
+    public ForceTouchListener(Context context, long millisToVibrate, boolean isProgressive, boolean isVibrate, Callback forceTouchExecution)
+    {
+        this.context = context;
+        this.millisToVibrate = millisToVibrate;
+        this.pressureLimit = DEFAULT_PRESSURE_LIMIT;
+        this.forceTouchExecution = forceTouchExecution;
+        this.isProgressive = isProgressive;
+        this.isVibrate = isVibrate;
+    }
+
+    /**
+     * Public constructor with only Context, millisToVibrate and pressureLimit is setted by default
+     * @param context Context
+     * @param forceTouchExecution Callback
+     * @param isProgressive boolean
+     */
+    public ForceTouchListener(Context context, boolean isProgressive, boolean isVibrate, Callback forceTouchExecution){
+        this.context = context;
+        this.millisToVibrate = DEFAULT_MILLIS_TO_VIBRATE;
+        this.pressureLimit = DEFAULT_PRESSURE_LIMIT;
+        this.forceTouchExecution = forceTouchExecution;
+        this.isProgressive = isProgressive;
+        this.isVibrate = isVibrate;
     }
 
     /**
@@ -96,15 +177,59 @@ public class ForceTouchListener implements View.OnTouchListener {
     public boolean onTouch(View view, MotionEvent motionEvent) {
         float pressure = motionEvent.getPressure();
         checkParam(pressureLimit, millisToVibrate);
-        if(pressure >= pressureLimit) {
-            if(motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
-                Vibrator vibr = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
-                vibr.vibrate(millisToVibrate);
-                forceTouchExecution.onForceTouch();
-            }
-        }
         setPressure(pressure);
+        switch(motionEvent.getAction()){
+            case MotionEvent.ACTION_DOWN:
+                if(pressure >= pressureLimit && !alreadyExecuted && !isProgressive) {
+                    if(isVibrate) {
+                        Vibrator vibr = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
+                        vibr.vibrate(millisToVibrate);
+                    }
+                    forceTouchExecution.onForceTouch();
+                    alreadyExecuted = true;
+                }else if(isProgressive){
+                    alreadyExecuted = false;
+                    progressiveForceTouch();
+                }else{
+                    alreadyExecuted = false;
+                    forceTouchExecution.onNormalTouch();
+                    timer.stop(runnable);
+                }
+                break;
+            case MotionEvent.ACTION_CANCEL:
+                if(isProgressive) {
+                    timer.stop(runnable);
+                }
+                alreadyExecuted = false;
+                break;
+            case MotionEvent.ACTION_UP:
+                if(isProgressive) {
+                    timer.stop(runnable);
+                }
+                alreadyExecuted = false;
+                break;
+        }
         return true;
+    }
+
+    /**
+     * Handle progressive pressure on the screen
+     */
+    private void progressiveForceTouch(){
+        runnable = new Runnable() {
+            @Override
+            public void run() {
+                if(getPressure() >= pressureLimit && !alreadyExecuted && isProgressive) {
+                    if(isVibrate) {
+                        Vibrator vibr = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
+                        vibr.vibrate(millisToVibrate);
+                    }
+                    forceTouchExecution.onForceTouch();
+                    alreadyExecuted = true;
+                }
+            }
+        };
+        timer.scheduleAtFixedRate(runnable, 1);
     }
 
     /**
@@ -161,4 +286,49 @@ public class ForceTouchListener implements View.OnTouchListener {
      * @return long
      */
     public long getMillisToVibrate(){ return millisToVibrate; }
+
+    /**
+     * Get isProgressive
+     * @return boolean
+     */
+    public boolean isProgressive() {
+        return isProgressive;
+    }
+}
+
+/**
+ * TaskScheduler class
+ */
+class TaskScheduler extends Handler {
+    private ArrayMap<Runnable,Runnable> tasks = new ArrayMap<>();
+
+    public void scheduleAtFixedRate(final Runnable task,long delay,final long period) {
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                task.run();
+                postDelayed(this, period);
+            }
+        };
+        tasks.put(task, runnable);
+        postDelayed(runnable, delay);
+    }
+
+    public void scheduleAtFixedRate(final Runnable task,final long period) {
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                task.run();
+                postDelayed(this, period);
+            }
+        };
+        tasks.put(task, runnable);
+        runnable.run();
+    }
+
+    public void stop(Runnable task) {
+        Runnable removed = tasks.remove(task);
+        if (removed!=null) removeCallbacks(removed);
+    }
+
 }

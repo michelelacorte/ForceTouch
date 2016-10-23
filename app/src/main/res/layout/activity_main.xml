@@ -13,13 +13,28 @@
     <TextView
         android:id="@+id/pressureText"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"/>
 
     <TextView
-        android:id="@+id/pressureLimit"
+        android:paddingTop="20dp"
+        android:textSize="18sp"
         android:layout_below="@+id/pressureText"
+        android:id="@+id/textLimit"
+        android:text="Pressure Limit: "
+        android:textColor="@android:color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <EditText
+        android:paddingTop="42dp"
+        android:id="@+id/pressureLimit"
+        android:layout_toRightOf="@+id/textLimit"
+        android:layout_toEndOf="@+id/textLimit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"/>
 
     <TextView
         android:text="Tap on Screen"
@@ -28,4 +43,28 @@
         android:textSize="25sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <CheckBox
+        android:paddingTop="20dp"
+        android:id="@+id/isProgressive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="isProgressive"
+        android:textSize="18sp"
+        android:checked="false"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:layout_below="@+id/pressureLimit"/>
+
+    <CheckBox
+        android:paddingTop="20dp"
+        android:id="@+id/isVibrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="isVibrate"
+        android:textSize="18sp"
+        android:checked="true"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:layout_below="@+id/isProgressive"/>
 </RelativeLayout>
