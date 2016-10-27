@@ -10,6 +10,8 @@
 
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
 
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-ForceTouch-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/4560)
+
 
 ##EXAMPLE
 
