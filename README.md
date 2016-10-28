@@ -63,6 +63,10 @@ Android API 14+
 
 ##CHANGELOG
 
+**v1.0.1 (Coming Soon!)**
+- Added `isProgressive` boolean to detect progressive pressure (Default false).
+- Interface `ForceTouchExecution` renamed with `Callback`
+
 **v1.0.0**
 - Support API 14+ (API 25 Compatible)
 - Added class `ForceTouchListener` with constructor to create Force Touch witch custom param
