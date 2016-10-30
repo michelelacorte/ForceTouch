@@ -64,7 +64,8 @@ Android API 14+
 ##CHANGELOG
 
 **v1.0.1 (Coming Soon!)**
-- Added `isProgressive` boolean to detect progressive pressure (Default false).
+- Added `isProgressive` boolean to detect progressive pressure! (Default false).
+- Added method `onNormalTouch` to `Callback` interface, the method is invoked when pressure is low (not overtake pressureLimit)
 - Interface `ForceTouchExecution` renamed with `Callback`
 
 **v1.0.0**
