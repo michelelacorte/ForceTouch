@@ -35,7 +35,7 @@ allprojects {
 Than add this dependencies
 
 ```groovy
-compile 'com.github.michelelacorte:ForceTouch:1.0.0'
+compile 'com.github.michelelacorte:ForceTouch:1.0.1'
 ```
 
 ```groovy
