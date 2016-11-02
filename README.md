@@ -65,14 +65,16 @@ Android API 14+
 
 **v1.0.1 (Coming Soon!)**
 - Added `isProgressive` boolean to detect progressive pressure! (Default false).
-- Added method `onNormalTouch` to `Callback` interface, the method is invoked when pressure is low (not overtake pressureLimit)
-- Interface `ForceTouchExecution` renamed with `Callback`
+- Added `isVibrate` boolean to set vibration.
+- Added method `onNormalTouch` to `Callback` interface, the method is invoked when pressure is low (not overtake pressureLimit).
+- Interface `ForceTouchExecution` renamed with `Callback`.
+- Improved example App.
 
 **v1.0.0**
 - Support API 14+ (API 25 Compatible)
-- Added class `ForceTouchListener` with constructor to create Force Touch witch custom param
+- Added class `ForceTouchListener` with constructor to create Force Touch witch custom param.
 - Added interface `ForceTouchExecution` with method `onForceTouch` for define custom action onForceTouch detected.
-- Added example App
+- Added example App.
 
 ##CREDITS
 
