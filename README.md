@@ -1,4 +1,4 @@
-# ForceTouch (Coming Soon!)
+# ForceTouch
 <h1 align="center"><img src="https://s13.postimg.org/rodwtssrr/background.png"/></h1>
 <h2 align="center">Simple implementation of ForceTouch on Android</h1>
 
@@ -10,6 +10,8 @@
 
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
 
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-ForceTouch-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/4560)
+
 
 ##EXAMPLE
 
@@ -18,6 +20,23 @@
 ![alt tag](https://s14.postimg.org/5973qqtcx/screen.png)
 
 ##USAGE
+
+Add this to `build.gradle`
+
+```groovy
+allprojects {
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
+```
+
+Than add this dependencies
+
+```groovy
+compile 'com.github.michelelacorte:ForceTouch:1.0.0'
+```
 
 ```groovy
 final ForceTouchListener forceTouchListener = new ForceTouchListener(getApplicationContext(), 70, 0.27f, new ForceTouchExecution() {
@@ -44,10 +63,18 @@ Android API 14+
 
 ##CHANGELOG
 
-**v1.0.0 (Coming Soon)**
+**v1.0.1 (Coming Soon!)**
+- Added `isProgressive` boolean to detect progressive pressure! (Default false).
+- Added `isVibrate` boolean to set vibration.
+- Added method `onNormalTouch` to `Callback` interface, the method is invoked when pressure is low (not overtake pressureLimit).
+- Interface `ForceTouchExecution` renamed with `Callback`.
+- Improved example App.
+
+**v1.0.0**
 - Support API 14+ (API 25 Compatible)
-- Added class `ForceTouchListener` with constructor to create Force Touch witch custom param
+- Added class `ForceTouchListener` with constructor to create Force Touch witch custom param.
 - Added interface `ForceTouchExecution` with method `onForceTouch` for define custom action onForceTouch detected.
+- Added example App.
 
 ##CREDITS
 
