@@ -17,7 +17,7 @@
 
 ####Force Touch is on Google Play (Coming Soon)!!!
 
-![alt tag](https://s14.postimg.org/5973qqtcx/screen.png)
+![alt tag](https://s14.postimg.org/5s3scqf9t/screen.png)
 
 ##USAGE
 
