@@ -39,12 +39,17 @@ compile 'com.github.michelelacorte:ForceTouch:1.0.0'
 ```
 
 ```groovy
-final ForceTouchListener forceTouchListener = new ForceTouchListener(getApplicationContext(), 70, 0.27f, new ForceTouchExecution() {
-            @Override
-            public void onForceTouch() {
-                //functionToInvokeOnForceTouch();
-            }
-        });
+final ForceTouchListener forceTouchListener = new ForceTouchListener(getApplicationContext(), 70, 0.27f, true, true, new Callback() {
+                        @Override
+                        public void onForceTouch() {
+                            //functionToInvokeOnForceTouch();
+                        }
+
+                        @Override
+                        public void onNormalTouch() { 
+                            //functionToInvokeOnNormalTouch(); 
+                        }
+                    });
 ```
 
 Than you can use Listener with setOnTouchListener method of View
@@ -63,7 +68,7 @@ Android API 14+
 
 ##CHANGELOG
 
-**v1.0.1 (Coming Soon!)**
+**v1.0.1**
 - Added `isProgressive` boolean to detect progressive pressure! (Default false).
 - Added `isVibrate` boolean to set vibration.
 - Added method `onNormalTouch` to `Callback` interface, the method is invoked when pressure is low (not overtake pressureLimit).
