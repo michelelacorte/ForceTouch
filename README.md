@@ -15,7 +15,12 @@
 
 ##EXAMPLE
 
-####Force Touch is on Google Play (Coming Soon)!!!
+####Force Touch is on Google Play!!!
+
+<a href="https://play.google.com/store/apps/details?id=it.michelelacorte.exampleforcetouch">
+<img alt="Get it on Google Play" src="https://s32.postimg.org/50h5qj4lx/google_play_badge.png" />
+</a>
+
 
 ![alt tag](https://s14.postimg.org/5s3scqf9t/screen.png)
 
