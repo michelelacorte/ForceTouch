@@ -80,6 +80,9 @@ Android API 14+
 
 ##CHANGELOG
 
+**v1.0.2 (Coming Soon!)**
+- Added params `View view, MotionEvent motionEvent` to `onNormalTouch` and `onForceTouch` callback method
+
 **v1.0.1**
 - Added `isProgressive` boolean to detect progressive pressure! (Default false).
 - Added `isVibrate` boolean to set vibration.
