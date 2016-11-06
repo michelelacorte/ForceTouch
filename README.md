@@ -12,6 +12,13 @@
 
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-ForceTouch-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/4560)
 
+##WHAT IS FORCE TOUCH?
+
+You know that Android already detects different screen pressure from API 5? (Eclair, Android 2.0)
+
+Well, I wanted to enlighten you about it, I created a library for Android that takes advantage of this property to implement the Force Touch (or 3D Touch), I have also created a dedicated app to give the opportunity for developers and not, try this library, the app is on the [Play Store](https://play.google.com/store/apps/details?id=it.michelelacorte.exampleforcetouch).
+
+This library can also be used on the launcher and by doing so you can implement ForceTouch on icons of the applications, not using the Long Press (shortcut) introduced in android 7.1. I set myself a custom launcher to test the touch force and are currently in the testing phase, just ready you will see everything on GitHub.
 
 ##EXAMPLE
 
