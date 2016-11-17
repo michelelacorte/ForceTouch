@@ -20,6 +20,21 @@ Well, I wanted to enlighten you about it, I created a library for Android that t
 
 This library can also be used on the launcher and by doing so you can implement ForceTouch on icons of the applications, not using the Long Press (shortcut) introduced in android 7.1. I set myself a custom launcher to test the touch force and are currently in the testing phase, just ready you will see everything on GitHub.
 
+
+#v2.0.0 Big Update!! (Coming Soon)
+
+###Here we are!
+###The touch force is ready and is going to get on the custom launcher !!
+
+###As promised I've implemented Force Touch in my custom launcher ... and you see the picture
+
+<h1 align="center"><img src="https://s22.postimg.org/wwd6tjt69/force_touch_launcher_framed_1.png"/></h1>
+
+###Yes, I'm working with shortcuts Android 7.1 Nougat! and will soon be available for custom launcher from API 14 !!
+
+###Stay Tuned!
+###For changelog see v2.0.0 in CHANGELOG section
+
 ##EXAMPLE
 
 ####Force Touch is on Google Play!!!
@@ -80,8 +95,9 @@ Android API 14+
 
 ##CHANGELOG
 
-**v1.0.2 (Coming Soon!)**
+**v2.0.0 (Coming Soon!)**
 - Added params `View view, MotionEvent motionEvent` to `onNormalTouch` and `onForceTouch` callback method
+- Added `ForceTouchGestureListener` for set force touch to custom Launcher! (similar to  `ForceTouchListener ` class)
 
 **v1.0.1**
 - Added `isProgressive` boolean to detect progressive pressure! (Default false).
