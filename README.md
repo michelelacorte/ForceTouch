@@ -21,6 +21,7 @@ Well, I wanted to enlighten you about it, I created a library for Android that t
 This library can also be used on the launcher and by doing so you can implement ForceTouch on icons of the applications, not using the Long Press (shortcut) introduced in android 7.1. I set myself a custom launcher to test the touch force and are currently in the testing phase, just ready you will see everything on GitHub.
 
 
+<img align="left" src="https://s14.postimg.org/d26hxbbxt/ic_launcher.png">
 #v2.0.0 Big Update!! (Coming Soon)
 
 ###Here we are!
