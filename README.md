@@ -32,6 +32,10 @@ This library can also be used on the launcher and by doing so you can implement 
 <h1 align="center"><img src="https://s22.postimg.org/wwd6tjt69/force_touch_launcher_framed_1.png"/></h1>
 
 ###Yes, I'm working with shortcuts Android 7.1 Nougat! and will soon be available for custom launcher from API 14 !!
+###See an example here (beta)
+
+<h1 align="center"><img src="http://i.giphy.com/26hirzjcbspOH8zcs.gif"/></h1>
+
 ###I've also implemented `Activity` to calibrate Force Touch depending on screen device!!
 ###Stay Tuned!
 ###For changelog see v2.0.0 in CHANGELOG section
