@@ -32,7 +32,7 @@ This library can also be used on the launcher and by doing so you can implement 
 <h1 align="center"><img src="https://s22.postimg.org/wwd6tjt69/force_touch_launcher_framed_1.png"/></h1>
 
 ###Yes, I'm working with shortcuts Android 7.1 Nougat! and will soon be available for custom launcher from API 14 !!
-
+###I've also implemented `Activity` to calibrate Force Touch depending on screen device!!
 ###Stay Tuned!
 ###For changelog see v2.0.0 in CHANGELOG section
 
@@ -99,6 +99,7 @@ Android API 14+
 **v2.0.0 (Coming Soon!)**
 - Added params `View view, MotionEvent motionEvent` to `onNormalTouch` and `onForceTouch` callback method
 - Added `ForceTouchGestureListener` for set force touch to custom Launcher! (similar to  `ForceTouchListener ` class)
+- Added `Activity Calibration` to calibrate force touch before use it!
 
 **v1.0.1**
 - Added `isProgressive` boolean to detect progressive pressure! (Default false).
