@@ -20,6 +20,26 @@ Well, I wanted to enlighten you about it, I created a library for Android that t
 
 This library can also be used on the launcher and by doing so you can implement ForceTouch on icons of the applications, not using the Long Press (shortcut) introduced in android 7.1. I set myself a custom launcher to test the touch force and are currently in the testing phase, just ready you will see everything on GitHub.
 
+##DONATIONS
+
+**PayPal**
+
+* **[Donate $5]**: Thank's for creating this project, here's a coffee (or some beer) for you!
+
+* **[Donate $10]**: Wow, I am stunned. Let me take you to the movies!ù
+
+* **[Donate $15]**: I really appreciate your work, let's grab some lunch!
+
+* **[Donate $25]**: That's some awesome stuff you did right there, dinner is on me!
+
+* **[Donate $50]**: I really really want to support this project, great job!
+
+* **[Donate $100]**: You are the man! This project saved me hours (if not days) of struggle and hard work, simply awesome!
+
+* **[Donate $2799]**: Go buddy, buy Macbook Pro for yourself!
+
+Of course, you can also choose what you want to donate, all donations are awesome, or just choose import here [Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=LY7EX8WMWPWV6)
+
 
 <img align="left" src="https://s14.postimg.org/d26hxbbxt/ic_launcher.png">
 #v2.0.0 Big Update!! (Coming Soon)
@@ -145,3 +165,12 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ```
+
+
+[Donate $5]: 		https://www.paypal.me/MicheleLacorte/5
+[Donate $10]:  		https://www.paypal.me/MicheleLacorte/10
+[Donate $15]:  		https://www.paypal.me/MicheleLacorte/15
+[Donate $25]:  		https://www.paypal.me/MicheleLacorte/25
+[Donate $50]: 		https://www.paypal.me/MicheleLacorte/50
+[Donate $100]: 		https://www.paypal.me/MicheleLacorte/100
+[Donate $2799]: 	https://www.paypal.me/MicheleLacorte/2799
