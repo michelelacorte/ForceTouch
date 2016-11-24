@@ -50,7 +50,7 @@ Of course, you can also choose what you want to donate, all donations are awesom
 
 ###As promised I've implemented Force Touch in my custom launcher ... and you see the picture
 
-<h1 align="center"><img src="https://s22.postimg.org/wwd6tjt69/force_touch_launcher_framed_1.png"/></h1>
+<h1 align="center"><img src="https://s17.postimg.org/vimarchhb/Force_Touch_Launcher_framed.png"/></h1>
 
 ###Yes, I'm working with shortcuts Android 7.1 Nougat! and will soon be available for custom launcher from API 14 !!
 ###See an example here (beta)
