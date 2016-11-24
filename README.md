@@ -55,7 +55,7 @@ Of course, you can also choose what you want to donate, all donations are awesom
 ###Yes, I'm working with shortcuts Android 7.1 Nougat! and will soon be available for custom launcher from API 14 !!
 ###See an example here (beta)
 
-<h1 align="center"><img src="http://i.giphy.com/26hirzjcbspOH8zcs.gif"/></h1>
+<h1 align="center"><img src="http://i.giphy.com/3oz8xM1ZWIeAjdXTHy.gif"/></h1>
 
 ###I've also implemented `Activity` to calibrate Force Touch depending on screen device!!
 ###Stay Tuned!
