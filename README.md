@@ -2,8 +2,6 @@
 <h1 align="center"><img src="https://s13.postimg.org/rodwtssrr/background.png"/></h1>
 <h2 align="center">Simple implementation of ForceTouch on Android</h1>
 
-
-<span class="badge-paypal"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=LY7EX8WMWPWV6" title="Donate to this project using Paypal"><img src="https://img.shields.io/badge/paypal-donate-yellow.svg" alt="PayPal donate button" /></a></span>
 [![Twitter](https://img.shields.io/badge/Twitter-@LacorteMichele-blue.svg?style=flat)](https://twitter.com/LacorteMichele)
 
 [![API](https://img.shields.io/badge/API-14%2B-yellow.svg?style=flat)](https://android-arsenal.com/api?level=14)
@@ -40,7 +38,7 @@ This project needs you! If you would like to support this project's further deve
 
 * **[Donate $2799]**: Go buddy, buy Macbook Pro for yourself!
 
-Of course, you can also choose what you want to donate, all donations are awesome!!
+Of course, you can also choose what you want to donate! All donations are awesome!! Follow this link [Donate](https://www.paypal.me/MicheleLacorte)!!
 
 <img align="left" src="https://s14.postimg.org/d26hxbbxt/ic_launcher.png">
 #v2.0.0 Big Update!! (Coming Soon)
