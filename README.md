@@ -40,6 +40,8 @@ This project needs you! If you would like to support this project's further deve
 
 Of course, you can also choose what you want to donate! All donations are awesome!! Follow this link [Donate](https://www.paypal.me/MicheleLacorte)!!
 
+If you want to contribute you may download [Donation App](https://play.google.com/store/apps/details?id=it.michelelacorte.githubdonation) from Google Play
+
 <img align="left" src="https://s14.postimg.org/d26hxbbxt/ic_launcher.png">
 #v2.0.0 Big Update!! (Coming Soon)
 
@@ -64,6 +66,12 @@ Of course, you can also choose what you want to donate! All donations are awesom
 ####Force Touch is on Google Play!!!
 
 <a href="https://play.google.com/store/apps/details?id=it.michelelacorte.exampleforcetouch">
+<img alt="Get it on Google Play" src="https://s32.postimg.org/50h5qj4lx/google_play_badge.png" />
+</a>
+
+####If you want to help me please download Donation App!!
+
+<a href="https://play.google.com/store/apps/details?id=it.michelelacorte.githubdonation">
 <img alt="Get it on Google Play" src="https://s32.postimg.org/50h5qj4lx/google_play_badge.png" />
 </a>
 
