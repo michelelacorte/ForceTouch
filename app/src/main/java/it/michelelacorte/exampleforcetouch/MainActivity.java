@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main); #gitignore
         pressureText = (TextView) findViewById(R.id.pressureText);
         pressureLimit = (EditText) findViewById(R.id.pressureLimit);
         isProgressive = (CheckBox) findViewById(R.id.isProgressive);
