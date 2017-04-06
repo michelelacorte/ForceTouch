@@ -43,9 +43,6 @@ public class MainActivity extends AppCompatActivity {
 		since this function is overridden, we use the super method to invoke it
 	*/
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main); //gitignore
-        pressureText = (TextView) findViewById(R.id.pressureText); //gitignore
-        pressureLimit = (EditText) findViewById(R.id.pressureLimit);
         isProgressive = (CheckBox) findViewById(R.id.isProgressive);
         isVibrate = (CheckBox) findViewById(R.id.isVibrate);
         final ForceTouchListener forceTouchListener = new ForceTouchListener(getApplicationContext(), 70, 0.27f, isProgressive.isChecked(), isVibrate.isChecked(), new Callback() {
