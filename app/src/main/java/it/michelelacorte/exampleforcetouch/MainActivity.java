@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 	*/
         super.onCreate(savedInstanceState); #gitignore
         setContentView(R.layout.activity_main); //#gitignore
-        pressureText = (TextView) findViewById(R.id.pressureText);
+        pressureText = (TextView) findViewById(R.id.pressureText); //#gitignore
         pressureLimit = (EditText) findViewById(R.id.pressureLimit);
         isProgressive = (CheckBox) findViewById(R.id.isProgressive);
         isVibrate = (CheckBox) findViewById(R.id.isVibrate);
