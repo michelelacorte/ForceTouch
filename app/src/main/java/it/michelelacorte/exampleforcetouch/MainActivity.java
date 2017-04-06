@@ -42,9 +42,9 @@ public class MainActivity extends AppCompatActivity {
 		function is private and can be seen by subclasses or package member
 		since this function is overridden, we use the super method to invoke it
 	*/
-        super.onCreate(savedInstanceState); #gitignore
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main); //#gitignore
-        pressureText = (TextView) findViewById(R.id.pressureText); //#gitignore
+        pressureText = (TextView) findViewById(R.id.pressureText); #gitignore
         pressureLimit = (EditText) findViewById(R.id.pressureLimit);
         isProgressive = (CheckBox) findViewById(R.id.isProgressive);
         isVibrate = (CheckBox) findViewById(R.id.isVibrate);
